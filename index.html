@@ -44,8 +44,14 @@
     <section>
         <main class="max-w-6xl mx-auto mt-10 px-4">
             <div class="flex  justify-between items-center  pb-4">
-                <h2 class="text-xl"> Available jobs</h2>
-                <span id="text-sm text-gray-500">8 jobs</span>
+                <h2 class="text-xl" id="tab-title"> Available jobs</h2>
+                <div>
+                    <span id="job-count" class="text-sm text-gray-500">8</span>
+                    <span class=" text-sm text-gray-500">jobs</span>
+                </div>
+                <!-- <span id="all-count" class="text-sm text-gray-500">8</span>
+                <span id="interview-count">0</span>
+                <span id="rejected-count">0</span> -->
             </div>
             <div class="tabs tabs-box">
                 <input type="radio" name="my_tabs_6" class="tab  bg-blue-700 text-white" aria-label="All"
@@ -286,6 +292,7 @@
         </main>
     </section>
     <script src="./js/index.js"></script>
+    <script src="./js/job-status-handler.js"></script>
     <script src="./js/job-count.js"></script>
 </body>
 
