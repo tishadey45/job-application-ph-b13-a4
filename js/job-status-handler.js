@@ -7,7 +7,7 @@ window.updateCount = function () {
   const jobCount = document.getElementById("job-count");
 
   // Dynamic Calculation
-  const allLeft = allContainer?.querySelectorAll(".job-apply").length || 0;
+  const allLeft = allContainer?.querySelectorAll(".job-apply").length || 8;
   const interviewCount =
     interviewContainer?.querySelectorAll(".job-apply").length || 0;
   const rejectedCount =
