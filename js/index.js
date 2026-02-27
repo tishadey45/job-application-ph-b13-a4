@@ -18,6 +18,10 @@ interviewButton.forEach((button) => {
     const salary = jobApply.querySelector(".salary").textContent;
     const description = jobApply.querySelector(".description").textContent;
     // console.log({companyName,position,location,jobType,salary,description});
+    // const interviewButton = jobApply.querySelector(".interview-button");
+    // interviewButton.disabled = true;
+    // const rejectedButton = jobApply.querySelector(".rejected-button");
+    // rejectedButton.disabled = true;
     const interview = document.createElement("div");
     interview.className = `card job-apply bg-white p-6 rounded-xl mb-6 shadow-sm`;
     interview.innerHTML = `  <div class="flex justify-between">
@@ -30,18 +34,23 @@ interviewButton.forEach((button) => {
                                     <span class="job-type">${jobType}</span> •
                                     <span class="salary">${salary}</span>
                                 </p>
-                                <p class="description text-gray-600 mt-4">${description}</p>`;
+                                <p class="description text-gray-600 mt-4">${description}</p>
+                            <div class="flex gap-4 mt-4">
+                                    <button class="interview-button px-4 py-2 border border-green-500 text-green-600 rounded-lg" disabled>Interview</button>
+                                    <button class="rejected-button px-4 py-2 border border-red-500 text-red-600 rounded-lg" >Rejected</button> 
+                            </div>
+                                
+                                `;
     const interviewTab = document.getElementById("interview-tab");
-    interviewTab.prepend(interview);
+    // interviewTab.prepend(interview);
   });
 });
-
 
 rejectedButton.forEach((button) => {
   button.addEventListener("click", (event) => {
     // console.log(event.target);
     // alert("We regret to inform you that your application has been rejected. We encourage you to apply for other opportunities in the future.");
-     const jobApply = event.target.closest(".job-apply");
+    const jobApply = event.target.closest(".job-apply");
     // console.log({jobApply,event});
     const companyName = jobApply.querySelector(".company-name").textContent;
     const position = jobApply.querySelector(".position").textContent;
@@ -65,8 +74,13 @@ rejectedButton.forEach((button) => {
                                     <span class="job-type">${jobType}</span> •
                                     <span class="salary">${salary}</span>
                                 </p>
-                                <p class="description text-gray-600 mt-4">${description}</p>`;
+                                <p class="description text-gray-600 mt-4">${description}</p>
+                              <div class="flex gap-4 mt-4">
+                                    <button class="interview-button px-4 py-2 border border-green-500 text-green-600 rounded-lg" >Interview</button>
+                                    <button class="rejected-button px-4 py-2 border border-red-500 text-red-600 rounded-lg" disabled>Rejected</button> 
+                              </div>
+                                `;
     const rejectedTab = document.getElementById("rejected-tab");
-    rejectedTab.prepend(rejected);
+    // rejectedTab.prepend(rejected);
   });
 });
